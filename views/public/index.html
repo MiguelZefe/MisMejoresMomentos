@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Mejores Momentos - MVC</title>
+    <style>
+        .error { color: red; font-size: 0.8em; display: none; }
+    </style>
+</head>
+<body>
+
+    <section id="login-section">
+        <h2>Acceso de Usuario</h2>
+        <form id="loginForm">
+            <label for="loginUser">Usuario:</label>
+            <input type="text" id="loginUser" name="loginUser">
+            <span class="error" id="errLoginUser">Campo requerido (no solo espacios).</span><br>
+
+            <label for="loginPass">Contraseña:</label>
+            <input type="password" id="loginPass" name="loginPass">
+            <span class="error" id="errLoginPass">Campo requerido (no solo espacios).</span><br>
+
+            <label><input type="checkbox" id="rememberMe"> Recordarme en este equipo</label><br>
+            <button type="submit">Ingresar</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="register-section">
+        <h2>Registro de Nuevo Usuario</h2>
+        <form id="registerForm">
+            <label for="regUser">Nombre de usuario (3-10 letras inglesas/números):</label>
+            <input type="text" id="regUser" name="regUser">
+            <span class="error" id="errRegUser">Formato inválido.</span><br>
+
+            <label for="regPass">Contraseña (8-12 carácteres, 1 mayús, 1 minús, 1 número):</label>
+            <input type="password" id="regPass" name="regPass">
+            <span class="error" id="errRegPass">Contraseña no cumple requisitos de seguridad.</span><br>
+
+            <label for="regPassConfirm">Repetir contraseña:</label>
+            <input type="password" id="regPassConfirm" name="regPassConfirm">
+            <span class="error" id="errRegPassConfirm">Las contraseñas no coinciden.</span><br>
+
+            <label for="regEmail">Correo electrónico:</label>
+            <input type="text" id="regEmail" name="regEmail">
+            <span class="error" id="errRegEmail">Email inválido o dominio incorrecto (2-4 caracteres).</span><br>
+
+            <label>Sexo:</label>
+            <select id="regSex" name="regSex">
+                <option value="">Seleccione...</option>
+                <option value="M">Femenino</option>
+                <option value="H">Masculino</option>
+                <option value="O">Otro</option>
+            </select>
+            <span class="error" id="errRegSex">Debe seleccionar su sexo.</span><br>
+
+            <label for="regDate">Fecha de nacimiento:</label>
+            <input type="date" id="regDate" name="regDate">
+            <span class="error" id="errRegDate">Fecha inválida.</span><br>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <script src="assets/js/validations.js"></script>
+</body>
+</html>
